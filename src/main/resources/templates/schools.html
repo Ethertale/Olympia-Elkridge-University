@@ -9,14 +9,117 @@
           integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" th:href="@{/css/fonts.css}">
     <title>Olympia Elkridge University</title>
+
+    <style>
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .behindImage {
+            background-color: black;
+            position: relative;
+            text-align: center;
+        }
+        .behindImage h2 {
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            color: white;
+            text-shadow: 0px 0px 4px black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .cardHover img {
+            width: 100%;
+            height: 30%;
+            background-color: black;
+            color: black;
+            transition: 0.3s ease-in-out;
+        }
+        .cardHover:hover {
+            img {
+                opacity: 0.7;
+            }
+            .behindImage h2 {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <div class="container-fluid p-0 flex-row justify-space-around">
     <nav th:replace="~{fragments::navbar}"></nav>
 
-    <div class="container">
-
+    <div class="container pt-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-4">
+                <div class="container">
+                    <a class="cardHover" href="">
+                        <div class="behindImage container p-0">
+                            <img th:src="@{/imgs/Law-Thumbnail.jpeg}" alt="">
+                            <h2>Law</h2>
+                        </div>
+                        <h5 class="m-0">Law</h5>
+                        <small>Helena Drake College of Jurisprudence</small>
+                        <p>Empowering legal minds through forward-facing branches in climate law, human rights, medical ethics, and digital privacy. This school trains students to shape policy and protect justice in a rapidly changing world.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="container">
+                    <a class="cardHover" href="">
+                        <div class="behindImage container p-0">
+                            <img th:src="@{/imgs/CompScience-Thumbnail.jpeg}" alt="">
+                            <h2>Computer Science</h2>
+                        </div>
+                        <h5 class="m-0">Computer Science</h5>
+                        <small>Cascadian Institute of Computing</small>
+                        <p>A hub for cutting-edge research in AI, cybersecurity, quantum algorithms, and sustainable tech. Students here build tomorrow’s technologies with a conscience for humanity and the planet.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="container">
+                    <a class="cardHover" href="">
+                        <div class="behindImage container p-0">
+                            <img th:src="@{/imgs/Medicine-Thumbnail.jpeg}" alt="">
+                            <h2>Medicine</h2>
+                        </div>
+                        <h5 class="m-0">Medicine</h5>
+                        <small>Elk Ridge School of Medicine</small>
+                        <p>Focused on the intersection of innovation and care, with strengths in robotic surgery, AI diagnostics, and mental health sciences. Designed to train the next generation of compassionate, tech-savvy physicians.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="container">
+                    <a class="cardHover" href="">
+                        <div class="behindImage container p-0">
+                            <img style="width: 100%; height: 30%; background-color: black" th:src="@{/imgs/Engineering-Thumbnail.jpeg}" alt="">
+                            <h2>Engineering</h2>
+                        </div>
+                        <h5 class="m-0">Engineering</h5>
+                        <small>Franklin D. Marlowe School of Engineering</small>
+                        <p>Merging technical precision with sustainability, this school leads in smart cities, energy innovation, biomedical devices, and embedded systems. Engineers here design resilient solutions for real-world impact.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="container">
+                    <a class="cardHover" href="">
+                        <div class="behindImage container p-0">
+                            <img style="width: 100%; height: 30%; background-color: black" th:src="@{/imgs/Quantum-Thumbnail.jpeg}" alt="">
+                            <h2>Quantum Physics</h2>
+                        </div>
+                        <h5 class="m-0">Quantum Physics</h5>
+                        <small>Luthien Advanced Physics Academy</small>
+                        <p>Exploring the frontiers of the universe through quantum fields, exotic particles, and cosmological simulation. This school empowers physicists to decode reality using advanced math and simulation architecture.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
